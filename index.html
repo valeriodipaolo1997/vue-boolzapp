@@ -17,76 +17,143 @@
         <link rel="stylesheet" href="./assets/style.css">
     </head>
     <body>
-        
-            
 
         <div id="app" class="vh-100">
 
-            
             <main id="app_body" class="d-flex">
-    
+
                 <div id="list_user">
-    
-                    <div class="list_header">
-    
+
+                    <div class="list_header d-flex justify-content-between">
+
+                        <div class="avatar d-flex align-items-center p-2">
+
+                            <img width="50" src="./assets/img/avatar_io.jpg"
+                                alt="immagine dell'utente"
+                                class="rounded-circle">
+
+                            <div class="ms-2">
+                                Sofia
+                            </div>
+
+                        </div>
+                        <!-- /.avatar -->
+
+                        <div
+                            class="my_icons d-flex align-items-center gap-3 pe-3">
+
+                            <i class="fa-solid fa-circle-notch"></i>
+
+                            <i class="fa-solid fa-message"></i>
+
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                        </div>
+                        <!-- /.my_icons -->
                     </div>
                     <!-- /.list_header -->
+
+                    <div class="notify d-flex align-items-center ps-3">
+
+                        <div class="bell_icon d-flex justify-content-center align-items-center bg-white rounded-circle">
     
-                    <div class="notify">
+                            <i class="fa-solid fa-bell-slash"></i>
     
+                        </div>
+    
+                        <div class="ms-2">
+    
+                            <div>Ricevi notifiche di nuovi messaggi</div>
+    
+                            <div>
+                                <a href="#" class="text-secondary">Attiva notifiche desktop</a>
+                            </div>
+    
+                        </div>
+    
+
                     </div>
                     <!-- /.notify -->
-    
+
                     <div class="user_search p-2">
-                        <input type="text" class="w-100" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" class="w-100"
+                            placeholder="Cerca o inizia una nuova chat">
                     </div>
-    
+
                     <div class="user_list">
-    
+
                         <ul class="list-unstyled">
-    
+
                             <li></li>
-    
+
                         </ul>
                         <!-- /ul -->
-    
+
                     </div>
                     <!-- /.user_list -->
-    
+
                 </div>
                 <!-- /#list_user -->
-    
-    
-    
+
                 <div id="chat">
-    
-                    <div class="chat_header">
-    
+
+                    <div class="chat_header d-flex justify-content-between">
+
+                        <div class="avatar d-flex align-items-center p-2">
+
+                            <img width="50" src="./assets/img/avatar_io.jpg"
+                                alt="immagine dell'utente"
+                                class="rounded-circle">
+
+                            <div class="ms-2">
+
+                                <div>
+                                    valerio
+                                </div>
+
+                                <div>
+                                    Ultimo accesso
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.avatar -->
+
+                        <div
+                            class="my_icons d-flex align-items-center gap-3 pe-3">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                            <i class="fa-solid fa-paperclip"></i>
+
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                        </div>
+                        <!-- /.my_icons -->
+
                     </div>
                     <!-- /.chat_header -->
-    
+
                     <div class="chat_body">
-    
+
                     </div>
                     <!-- /.chat_body -->
-    
+
                     <div class="chat_footer">
-    
+
                     </div>
                     <!-- /.chat_footer -->
-    
+
                 </div>
                 <!-- /#chat -->
-    
+
             </main>
             <!-- /#app_body -->
 
-           
-           
             <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-            crossorigin="anonymous">
+                src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+                integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+                crossorigin="anonymous">
   </script>
             <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
             <script src="./assets/main.js"></script>

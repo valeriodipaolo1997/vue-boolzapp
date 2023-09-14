@@ -53,6 +53,13 @@ body {
     background-color: var(--bz-light);
 }
 
+.my_icons i {
+
+    border: none;
+    color: var(--bz-icon);
+    font-size: 1.25rem;
+}
+
 /* #endregion app*/
 
 
@@ -62,7 +69,9 @@ body {
     width: 440px;
 }
 
-
+.list_header {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 .user_list ul {
     overflow-y: auto;
@@ -72,6 +81,17 @@ body {
     height: 80px;
     background-color: var(--bz-primary-light);
 }
+
+.notify .bell_icon {
+    width: 50px;
+    aspect-ratio: 1/1;
+}
+
+.notify .bell_icon i{
+    color: var(--bz-primary-light);
+    font-size: 1.75rem;
+}
+
 /* /#list_user */
 
 
