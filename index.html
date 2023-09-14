@@ -75,16 +75,44 @@
                     </div>
                     <!-- /.notify -->
 
-                    <div class="user_search p-2">
-                        <input type="text" class="w-100"
-                            placeholder="Cerca o inizia una nuova chat">
+                    <div class="user_search p-2 d-flex">
+                        <button class="d-inline-block bg-white px-4">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+    
+                        <input type="text" class="w-100 border-0 px-2" placeholder="Cerca o inizia una nuova chat">
                     </div>
 
                     <div class="user_list">
 
                         <ul class="list-unstyled">
 
-                            <li></li>
+                            <li v-for="(contact,index) in contacts">
+
+                                <div class="contact d-flex justify-content-between">
+    
+                                    <div>
+    
+                                        <div class="avatar d-flex align-items-center p-2">
+    
+                                            <img width="50" :src="contact.avatar" alt="immagine dell'utente" class="rounded-circle">
+    
+                                            <div class="ms-2">
+                                                <div> {{contact.name}} </div>
+                                                <p class="text_message">Ultimo messaggio inviato </p> 
+                                            </div>
+    
+                                        </div>
+                                        <!-- /.avatar -->
+    
+                                    </div>
+    
+                                    <div>12:00</div>
+    
+                                </div>
+                                <!-- /.contact -->
+    
+                            </li>
 
                         </ul>
                         <!-- /ul -->
