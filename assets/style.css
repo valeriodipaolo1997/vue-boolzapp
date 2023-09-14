@@ -1,0 +1,33 @@
+:root {
+    --bz-app-principal: #a0a0a0;
+    --bz-app-header: #009688;
+    --bz-app-MsgSent: #D5F9BA;
+    --bz-app-light: #E9EBEB;
+    --bz-app-white: #FFFFFF;
+    --bz-app-focus: #8EDAFC;
+}
+
+.bg-principal{
+    background-color: var(--bz-app-light);
+}
+
+.w-15{
+    width: 15%;
+}
+
+.display_app{
+    max-width: 1124px;
+    width: 100%;
+}
+
+.gradient-background {
+    background: linear-gradient(0deg, var(--bz-app-principal) 80%, var(--bz-app-header) 80%);
+ height: 100vh;
+}
+
+.my_icons{
+    & i{
+        font-size: 1.4rem;
+        color: var(--bz-app-principal);
+    }
+}
