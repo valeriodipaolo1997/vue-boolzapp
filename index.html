@@ -17,56 +17,78 @@
         <link rel="stylesheet" href="./assets/style.css">
     </head>
     <body>
+        
+            
 
-        <div
-            class="gradient-background d-flex align-items-center justify-content-center"
-            id="app">
+        <div id="app" class="vh-100">
 
-            <div class="container">
-                <div class="display_app h-75">
-                    <div class="row">
-                        <div class="col-4 bg-principal p-0">
-                            <div class="user d-flex p-2">
-                                <div class="info d-flex align-items-center">
-
-                                    <img src="assets/img/avatar_io.jpg" alt
-                                        class="rounded-circle w-15 py-2">
-                                    <p class="m-0">valerio</p>
-                                </div>
-                                <div
-                                    class="my_icons w-25 d-flex align-items-center justify-content-between">
-
-                                    <i class="fa-solid fa-circle-notch"></i>
-                                    <i class="fa-solid fa-message"></i>
-                                    <i class="fa-solid fa-ellipsis-vertical"></i>
-
-                                </div>
-                            </div>
-                            <!--user-->
-                            <div class="notify d-flex justify-content-around align-items-center p-2">
-                                <div class="circle bg-white rounded-circle d-flex justify-content-center align-items-center">
-                                    <i class="fa-solid fa-bell-slash"></i>
-                                </div>
-                                <div>
-
-                                    <p>ricevi notifiche di nuovi messaggi</p>
-                                    <span><a href="">Attiva notifiche Desktop</a></span>
-                                </div>
-                            </div>
-                            <!--notify-->
-                            <div class="search_chat border-0 my-1 mx-2 p-2 rounded-2 shadow">
-                                <button class="border-0 bg-transparent w-15" ><i class="fa-solid fa-magnifying-glass "></i></button>
-                                <input type="text" class="border-0 bg-transparent w-75" placeholder="cerca o inizia una nuova chat">
-                            </div>
-                            <!--search-->
-                        </div>
-                        <div class="col-8"></div>
+            
+            <main id="app_body" class="d-flex">
+    
+                <div id="list_user">
+    
+                    <div class="list_header">
+    
                     </div>
+                    <!-- /.list_header -->
+    
+                    <div class="notify">
+    
+                    </div>
+                    <!-- /.notify -->
+    
+                    <div class="user_search p-2">
+                        <input type="text" class="w-100" placeholder="Cerca o inizia una nuova chat">
+                    </div>
+    
+                    <div class="user_list">
+    
+                        <ul class="list-unstyled">
+    
+                            <li></li>
+    
+                        </ul>
+                        <!-- /ul -->
+    
+                    </div>
+                    <!-- /.user_list -->
+    
                 </div>
+                <!-- /#list_user -->
+    
+    
+    
+                <div id="chat">
+    
+                    <div class="chat_header">
+    
+                    </div>
+                    <!-- /.chat_header -->
+    
+                    <div class="chat_body">
+    
+                    </div>
+                    <!-- /.chat_body -->
+    
+                    <div class="chat_footer">
+    
+                    </div>
+                    <!-- /.chat_footer -->
+    
+                </div>
+                <!-- /#chat -->
+    
+            </main>
+            <!-- /#app_body -->
 
-            </div>
-        </div>
-
-        <script src="./assets/main.js"></script>
-    </body>
-</html>
+           
+           
+            <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+            crossorigin="anonymous">
+  </script>
+            <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+            <script src="./assets/main.js"></script>
+        </body>
+    </html>

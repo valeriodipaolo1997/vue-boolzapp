@@ -1,61 +1,95 @@
+/* #region common */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 :root {
-    --bz-app-principal: #a0a0a0;
-    --bz-app-header: #009688;
-    --bz-app-MsgSent: #D5F9BA;
-    --bz-app-light: #E9EBEB;
-    --bz-app-white: #FFFFFF;
-    --bz-app-focus: #8EDAFC;
+    --bz-header: #009688;
+    --bz-bg-top: #dddbd1;
+    --bz-bg-bottom: #d2dbdc;
+    --bz-list-light: #e9ebeb;
+    --bz-white: #FFFFFF;
+    --bz-light: #eaeaea;
+    --bz-success: #D5F9BA;
+    --bz-icon: #b1b1b1;
+    --bz-primary-light: #8EDAFC;
+    --bz-footer-light: #f3eeea;
 }
 
-.bg-principal{
-    background-color: var(--bz-app-light);
+body {
+    font-family: Roboto, sans-serif;
+}
+/* #endregion common */
+
+/* #region app*/
+#app::before {
+    content: '';
+    display: block;
+    height: 145px;
+    background: var(--bz-header);
+
 }
 
-.w-15{
-    width: 15%;
+#app::after {
+    content: '';
+    display: block;
+    height: calc(100% - 145px);
+    background: linear-gradient(180deg, #dddbd1, #d2dbdc);
 }
-
-.display_app{
-    max-width: 1124px;
-    width: 100%;
-}
-
-.gradient-background {
-    background: linear-gradient(0deg, var(--bz-app-principal) 80%, var(--bz-app-header) 80%);
- height: 100vh;
-}
-
-.my_icons{
-    & i{
-        font-size: 1.4rem;
-        color: var(--bz-app-principal);
-    }
-}
-
-
-.notify{
-    background-color: var(--bz-app-focus);
-
-    .circle{
-        width: 3rem;
-        height: 3rem;
-    }
-
-    & i{
-        color: var(--bz-app-focus);
-        font-size: 1.5rem;
-
-    }
-
-    & a {
-        color: inherit;
-    }
-}
-
-.search_chat{
-
+#app_body {
+    margin: auto;
+    height: 95%;
+    width: 80%;
     background-color: white;
-    & i{
-        color: var(--bz-app-principal);
-    }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+.list_header, .chat_header {
+    height: 70px;
+    background-color: var(--bz-light);
+}
+
+/* #endregion app*/
+
+
+
+/* #list_user */
+#list_user {
+    width: 440px;
+}
+
+
+
+.user_list ul {
+    overflow-y: auto;
+}
+
+.notify {
+    height: 80px;
+    background-color: var(--bz-primary-light);
+}
+/* /#list_user */
+
+
+
+/* #chat */
+#chat {
+    width: calc(100% - 440px);
+}
+
+.chat_body {
+    height: calc(100% - 140px);
+    background-image: url('../img/mine.jpg');
+    overflow-y: auto;
+}
+
+.chat_footer {
+    height: 70px;
+    background-color: var(--bz-footer-light);
+}
+/* /#chat */
+
