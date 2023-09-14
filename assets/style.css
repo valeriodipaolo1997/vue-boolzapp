@@ -31,3 +31,31 @@
         color: var(--bz-app-principal);
     }
 }
+
+
+.notify{
+    background-color: var(--bz-app-focus);
+
+    .circle{
+        width: 3rem;
+        height: 3rem;
+    }
+
+    & i{
+        color: var(--bz-app-focus);
+        font-size: 1.5rem;
+
+    }
+
+    & a {
+        color: inherit;
+    }
+}
+
+.search_chat{
+
+    background-color: white;
+    & i{
+        color: var(--bz-app-principal);
+    }
+}
