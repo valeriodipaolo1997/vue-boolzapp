@@ -89,10 +89,11 @@
 
                         <ul class="list-unstyled">
 
-                            <li v-for="(contact,index) in contacts">
+                            <li v-for="(contact,index) in contacts"
+                                @click="setContactActive(index)">
 
                                 <div
-                                    class="contact d-flex justify-content-between">
+                                    class="contact d-flex justify-content-between" :class="contactActive == index ? 'bg_light' : '' ">
 
                                     <div>
 
@@ -106,8 +107,10 @@
 
                                             <div class="ms-2">
                                                 <div> {{contact.name}} </div>
-                                                <p class="text_message">Ultimo
-                                                    messaggio inviato </p>
+                                                <div>
+                                                    {{contact.messages[contact.messages.length
+                                                    - 1].message}}
+                                                </div>
                                             </div>
 
                                         </div>
@@ -147,8 +150,8 @@
                                     valerio
                                 </div>
 
-                                <div>
-                                    Ultimo accesso
+                                <div class="text_message">
+                                    Ultimo accesso alle ore 12:00
                                 </div>
                             </div>
 
@@ -173,25 +176,19 @@
                     <div class="chat_body">
                         <div class="chat_container">
 
-                            <div class="message_send col-6">
-    
-                                <div class="send rounded-2 d-flex">
-                                    <div class="flex-grow-1 p-2">MESSAGGIO</div>
-                                    <div class="message_time d-flex align-items-end">12:00</div>
-                                </div>
-    
+                            <div v-for="(message,index) in contacts[contactActive].messages"
+                                class="col-6 mb-2"
+                                :class=" message.status === 'sent' ? 'message_sent' : 'message_received' ">
+                                <div class="rounded-2 d-flex flex-column" :class=" message.status === 'sent' ? 'sent' : 'received' ">
+                                    <div class="flex-grow-1 pt-2 ps-2">
+                                        {{message.message}}
+                                    </div>
+                                    <div class="message_time d-flex justify-content-end">
+                                        {{message.date}}
+                                    </div>
+
                             </div>
-    
-                            <div class="message_received col-6">
-    
-                                <div class="received rounded-2 d-flex">
-                                    <div class="flex-grow-1 p-2">MESSAGGIO</div>
-                                    <div class="message_time d-flex align-items-end">12:00</div>
-                                </div>
-    
-                            </div>
-    
-    
+
                         </div>
                         <!-- /.chat_container -->
 
@@ -221,11 +218,7 @@
             </main>
             <!-- /#app_body -->
 
-            <script
-                src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-                integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-                crossorigin="anonymous">
-  </script>
+            
             <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
             <script src="./assets/main.js"></script>
         </body>
