@@ -9,6 +9,7 @@ createApp({
     data() {
         return {
             contactActive: 0,
+            userMessage: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -176,12 +177,36 @@ createApp({
     },
 
     methods: {
-
         setContactActive (index) {
-
             this.contactActive = index;
             console.log(this.contactActive);
 
+        },
+
+        sentMessage (userMessage) {
+
+            this.contacts[this.contactActive].messages.push({
+
+                date: '15/09/2023 16:30.50',
+                message: this.userMessage,
+                status: 'sent'
+
+            })
+
+            this.userMessage = '';
+
+            timeoutAutoMessage =  setTimeout(this.messageAuto, 1000)
+        },
+
+        messageAuto () {
+
+            this.contacts[this.contactActive].messages.push({
+
+                date: '15/09/2023 16:30.50',
+                message: 'Ok!',
+                status: 'received'
+
+            });
         }
     }
 
