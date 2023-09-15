@@ -81,7 +81,7 @@ button {
 }
 
 .user_list ul {
-    overflow-y: auto;
+    overflow-y:auto;
 }
 
 .notify {
@@ -133,6 +133,34 @@ button {
     color: #6b7376;
 }
 
+.chat_container{
+    width: 90%;
+    height: 80%;
+    margin: 5% auto;
+}
 
+
+.message_send {
+    margin-left: 50%;
+}
+
+.message_send, .message_received {
+    padding: 0 2rem;
+}
+
+.received {
+    background-color: var(--bz-white);
+
+}
+
+.send {
+    background-color: var(--bz-success);
+}
+
+.message_time {
+    font-size: 0.6rem;
+    padding: 0.1rem;
+    color: var(--bz-icon);
+}
 /* /#chat */
 
