@@ -55,22 +55,23 @@
 
                     <div class="notify d-flex align-items-center ps-3">
 
-                        <div class="bell_icon d-flex justify-content-center align-items-center bg-white rounded-circle">
-    
+                        <div
+                            class="bell_icon d-flex justify-content-center align-items-center bg-white rounded-circle">
+
                             <i class="fa-solid fa-bell-slash"></i>
-    
+
                         </div>
-    
+
                         <div class="ms-2">
-    
+
                             <div>Ricevi notifiche di nuovi messaggi</div>
-    
+
                             <div>
-                                <a href="#" class="text-secondary">Attiva notifiche desktop</a>
+                                <a href="#" class="text-secondary">Attiva
+                                    notifiche desktop</a>
                             </div>
-    
+
                         </div>
-    
 
                     </div>
                     <!-- /.notify -->
@@ -79,8 +80,9 @@
                         <button class="d-inline-block bg-white px-4">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
-    
-                        <input type="text" class="w-100 border-0 px-2" placeholder="Cerca o inizia una nuova chat">
+
+                        <input type="text" class="w-100 border-0 px-2"
+                            placeholder="Cerca o inizia una nuova chat">
                     </div>
 
                     <div class="user_list">
@@ -89,29 +91,35 @@
 
                             <li v-for="(contact,index) in contacts">
 
-                                <div class="contact d-flex justify-content-between">
-    
+                                <div
+                                    class="contact d-flex justify-content-between">
+
                                     <div>
-    
-                                        <div class="avatar d-flex align-items-center p-2">
-    
-                                            <img width="50" :src="contact.avatar" alt="immagine dell'utente" class="rounded-circle">
-    
+
+                                        <div
+                                            class="avatar d-flex align-items-center p-2">
+
+                                            <img width="50"
+                                                :src="contact.avatar"
+                                                alt="immagine dell'utente"
+                                                class="rounded-circle">
+
                                             <div class="ms-2">
                                                 <div> {{contact.name}} </div>
-                                                <p class="text_message">Ultimo messaggio inviato </p> 
+                                                <p class="text_message">Ultimo
+                                                    messaggio inviato </p>
                                             </div>
-    
+
                                         </div>
                                         <!-- /.avatar -->
-    
+
                                     </div>
-    
+
                                     <div>12:00</div>
-    
+
                                 </div>
                                 <!-- /.contact -->
-    
+
                             </li>
 
                         </ul>
@@ -167,7 +175,19 @@
                     </div>
                     <!-- /.chat_body -->
 
-                    <div class="chat_footer">
+                    <div
+                        class="chat_footer d-flex justify-content-around align-items-center gap-3 px-3">
+
+                        <i class="fa-regular fa-face-smile"></i>
+
+                        <div class="flex-grow-1 py-2 h-100">
+
+                            <input type="text" placeholder="Scrivi un messaggio"
+                                class="w-100 h-100 border-0 rounded-2 px-2 text_message">
+
+                        </div>
+
+                        <i class="fa-solid fa-location-arrow"></i>
 
                     </div>
                     <!-- /.chat_footer -->
