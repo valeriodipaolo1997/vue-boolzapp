@@ -81,8 +81,11 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
 
-                        <input type="text" class="w-100 border-0 px-2"
-                            placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" class="w-100 border-0 rounded-2 px-2"
+                            placeholder="Cerca o inizia una nuova chat"
+                            v-model="searchUser"
+                            @keyup="searchContact()">
+
                     </div>
 
                     <div class="user_list">
@@ -92,7 +95,8 @@
                             <li v-for="(contact,index) in contacts"
                                 @click="setContactActive(index)">
 
-                                <div
+                                <div v-if="contact.visible"
+                        
                                     class="contact d-flex justify-content-between"
                                     :class="contactActive == index ? 'bg_light' : '' ">
 

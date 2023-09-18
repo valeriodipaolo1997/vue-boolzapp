@@ -10,6 +10,7 @@ createApp({
         return {
             contactActive: 0,
             userMessage: '',
+            searchUser: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -182,6 +183,22 @@ createApp({
             console.log(this.contactActive);
 
         },
+        
+        searchContact() {
+
+            this.contacts.forEach((contact, index) => {
+
+                if (this.contacts[index].name.toLowerCase().includes(this.searchUser.toLowerCase())) {
+
+                    this.contacts[index].visible = true
+
+                } else {
+                    this.contacts[index].visible = false
+                }
+
+            })
+        },
+
 
         sentMessage (userMessage) {
 
