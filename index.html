@@ -150,14 +150,14 @@
 
                         <div class="avatar d-flex align-items-center p-2">
 
-                            <img width="50" src="./assets/img/avatar_io.jpg"
+                            <img width="50" :src="contacts[contactActive].avatar"
                                 alt="immagine dell'utente"
                                 class="rounded-circle">
 
                             <div class="ms-2">
 
                                 <div>
-                                    valerio
+                                    {{contacts[contactActive].name}}
                                 </div>
 
                                 <div class="text_message">
