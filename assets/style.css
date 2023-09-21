@@ -124,13 +124,15 @@ button {
 .chat_body {
     height: calc(100% - 70px);
     background-image: url('../assets/img/mine.jpg');
-    
+    overflow: auto;
 }
 
 .chat_footer {
+    width: 731px;
     height: 70px;
     margin-top: 1.4rem;
     background-color: var(--bz-footer-light);
+    position: fixed;
 }
 
 
@@ -162,6 +164,11 @@ button {
 
 .sent {
     background-color: var(--bz-success);
+}
+
+.sent, .received {
+    
+    word-wrap: anywhere;
 }
 
 .message_time {
